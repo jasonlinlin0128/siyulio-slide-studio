@@ -23,6 +23,8 @@
 
 ## 2. Aesthetic Direction（美學方向）
 
+<!-- prompt-include: aesthetic -->
+
 ### 整體風格定義
 
 **一句話描述**：乾淨現代的教育科技風，以高可讀性為底，用局部視覺強調引導注意力。
@@ -44,9 +46,13 @@
 | 無留白的滿版文字 | 缺乏視覺呼吸空間 |
 | 花體字、裝飾性英文字型 | 降低可讀性，不符合教學場合 |
 
+<!-- /prompt-include -->
+
 ---
 
 ## 3. Design Tokens（設計語彙）
+
+<!-- prompt-include: tokens -->
 
 ### 色彩系統
 
@@ -91,6 +97,8 @@
 | `space-lg` | 32px | 區塊間距 |
 | `space-xl` | 64px | 版面上下邊距 |
 
+<!-- /prompt-include -->
+
 ---
 
 ## 4. Content Architecture（內容架構）
@@ -130,6 +138,8 @@ Siyulio Slide Studio 預設以 8 張投影片為一份完整簡報，每張對�
 ---
 
 ## 5. Slide Patterns（投影片模板類型）
+
+<!-- prompt-include: patterns -->
 
 每種模板對應反覆出現的版面結構，便於 AI 工具或設計者快速套用。
 
@@ -187,9 +197,13 @@ Siyulio Slide Studio 預設以 8 張投影片為一份完整簡報，每張對�
 - 右側：姓名、職稱、核心引言
 - 下方：條列式經歷
 
+<!-- /prompt-include -->
+
 ---
 
 ## 6. Recurring UI Elements（反覆出現的 UI 元素）
+
+<!-- prompt-include: ui-elements -->
 
 | 元素 | 規格描述 |
 |------|----------|
@@ -201,9 +215,13 @@ Siyulio Slide Studio 預設以 8 張投影片為一份完整簡報，每張對�
 | **代碼/提示詞區塊** | 深灰底（`#2D2D2D`）、白字、`font-code`、圓角 8px |
 | **AI 工具名稱** | 首次出現時以粗體標示，後續維持正常字重 |
 
+<!-- /prompt-include -->
+
 ---
 
 ## 7. Content Tone（內容語氣）
+
+<!-- prompt-include: tone -->
 
 | 面向 | 規則 |
 |------|------|
@@ -213,6 +231,8 @@ Siyulio Slide Studio 預設以 8 張投影片為一份完整簡報，每張對�
 | **行動導向** | 每個功能介紹後應有「你可以這樣做」的應用說明 |
 | **提示詞呈現** | 完整原文保留，不縮寫，加代碼區塊格式 |
 | **禁止用語** | 避免「非常」「極其」「超級」等誇飾副詞，以具體數字或事實替代 |
+
+<!-- /prompt-include -->
 
 ---
 
