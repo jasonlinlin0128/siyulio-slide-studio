@@ -2,7 +2,7 @@
 
 **Date**: 2026-04-17
 **Phase**: 1 of [自動化 Roadmap](../../design.md)
-**Status**: 規劃完成，等實作
+**Status**: ✅ 已上線 2026-04-17（commit `92ee298`）— 技術目標達成（prompt 含 Brand Spine，footer 強制，Pattern 明確要求）；視覺品質仍有差距但屬於架構層面，見 [roadmap](../../design.md) Phase 2 重新定義
 
 ---
 
