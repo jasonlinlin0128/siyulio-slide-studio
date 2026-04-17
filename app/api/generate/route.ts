@@ -55,11 +55,16 @@ ${outline ? `大綱：\n${outline}` : "（請自動規劃大綱）"}
 
 投影片要求：
 - 共 8 張投影片
-- 第 1 張：封面（大標題、品牌標示 Siyulio Slide Studio）
-- 第 2 張：目錄
-- 第 3-7 張：內容投影片，每張聚焦一個概念，有標題有說明
-- 第 8 張：謝謝結尾
-- 每張外層 div 必須有 style：display:flex; flex-direction:column; height:100%; padding:60px; background:${cfg.bg}; box-sizing:border-box;
+- 第 1 張：封面（大標題 + 一句話副標題 + 右下角品牌標示「Siyulio Slide Studio」）
+- 第 2 張：目錄（列出第 3-7 張的實際標題，3-5 個項目，不要只寫類別詞）
+- 第 3-7 張：內容投影片，每張必須：
+  * 從以下 Patterns 挑一個套用：Pattern C 工具定義頁（左圖示右要點）/ Pattern D 比較表頁 / Pattern E 卡片陣列（2×2 或 1×4）/ Pattern F 步驟流程頁（編號 1/2/3/4 橫向）/ Pattern I 實戰訓練頁
+  * 至少 3 個具體要點或視覺元素（卡片、icon、表格、步驟編號、引號區塊），禁止僅用一行純文字說明
+  * 標題要包含主題關鍵詞（例：「NotebookLM 的 3 大研究優勢」而非僅「優勢」）
+  * 要點內容要引用真實工具名、功能、例子，禁止空泛敘述
+- 第 8 張：結尾（感謝語 + 右下角「Siyulio Slide Studio」）
+- **每一張投影片右下角**都必須顯示「Siyulio Slide Studio」字樣（絕對定位：position:absolute; right:30px; bottom:20px; font-size:12px; color:#555555）
+- 每張外層 div 必須有 style：display:flex; flex-direction:column; height:100%; padding:60px; background:${cfg.bg}; box-sizing:border-box; position:relative
 - 使用繁體中文，內容要具體充實，不要用佔位符`;
 }
 
