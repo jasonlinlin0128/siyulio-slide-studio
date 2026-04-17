@@ -15,7 +15,16 @@ let cache: Cache | null = null;
 
 export function loadDesignIncludes(): DesignInclude[] {
   const file = path.join(process.cwd(), "DESIGN.md");
-  const stat = fs.statSync(file);
+  let stat: fs.Stats;
+  try {
+    stat = fs.statSync(file);
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") {
+      cache = null;
+      return [];
+    }
+    throw err;
+  }
 
   if (cache && cache.mtimeMs === stat.mtimeMs) {
     return cache.includes;
