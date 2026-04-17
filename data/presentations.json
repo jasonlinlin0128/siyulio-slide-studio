@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ai-teaching-tools-2026",
+    "title": "用 AI 工具解放你的教學創造力",
+    "summary": "從 NotebookLM、Napkin AI 到 Canva Code，帶你走一遍從靈感到課堂簡報的完整 AI 工作流。",
+    "theme": "乾淨教育感",
+    "tags": ["AI工具", "教師研習", "NotebookLM", "Canva Code", "Napkin AI"],
+    "createdAt": "2026-04-17T00:00:00.000Z",
+    "contributor": "Siyulio",
+    "slideCount": 41,
+    "externalUrl": ""
+  },
+  {
+    "id": "notebook-lm-deep-dive",
+    "title": "NotebookLM 深度解析：教師必學的 AI 研究助理",
+    "summary": "以使用者為中心的研究助理，封閉式語義分析讓幻覺率降到最低，適合教材整理、備課與學生輔助。",
+    "theme": "乾淨教育感",
+    "tags": ["NotebookLM", "Google AI", "備課", "Podcast", "心智圖"],
+    "createdAt": "2026-04-10T00:00:00.000Z",
+    "contributor": "Siyulio",
+    "slideCount": 20,
+    "externalUrl": ""
+  },
+  {
+    "id": "canva-code-interactive",
+    "title": "Canva Code：不用寫程式也能做互動教學內容",
+    "summary": "只需自然語言對話，就能產生抽籤機、配對遊戲、時間軸、閃卡等互動式教學工具。",
+    "theme": "乾淨教育感",
+    "tags": ["Canva Code", "互動教學", "遊戲化學習", "無程式"],
+    "createdAt": "2026-04-05T00:00:00.000Z",
+    "contributor": "Siyulio",
+    "slideCount": 15,
+    "externalUrl": ""
+  },
+  {
+    "id": "napkin-ai-visual",
+    "title": "Napkin AI：把文字瞬間變成漂亮圖表",
+    "summary": "AI 驅動的視覺化圖表生成工具，貼上文字就能產生概念圖、流程圖、時程圖，直接用在簡報裡。",
+    "theme": "乾淨教育感",
+    "tags": ["Napkin AI", "圖表", "視覺化", "簡報設計"],
+    "createdAt": "2026-03-28T00:00:00.000Z",
+    "contributor": "Siyulio",
+    "slideCount": 8,
+    "externalUrl": ""
+  }
+]
