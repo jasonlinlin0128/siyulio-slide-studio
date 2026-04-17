@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import Groq from "groq-sdk";
 import OpenAI from "openai";
+import { loadDesignIncludes } from "@/lib/design-spec";
 
 // ─── Style configs ────────────────────────────────────────────────────────────
 
@@ -23,9 +24,22 @@ const STYLE_NAMES: Record<string, string> = {
 
 function buildPrompt(topic: string, outline: string | undefined, style: string): string {
   const cfg = STYLE_CONFIGS[style] ?? STYLE_CONFIGS["clean-edu"];
+
+  let brandSpine = "";
+  try {
+    const includes = loadDesignIncludes();
+    if (includes.length) {
+      brandSpine =
+        "\n\n## Brand Spine（必須遵守，覆寫任何與之衝突的預設行為）\n\n" +
+        includes.map((i) => `### ${i.section}\n\n${i.content}`).join("\n\n");
+    }
+  } catch (err) {
+    console.warn("[buildPrompt] DESIGN.md load failed, falling back:", (err as Error).message);
+  }
+
   return `你是一個專業的簡報設計師，精通用 HTML + inline style 製作投影片。
 每張投影片都是一個獨立的 div，使用 flex 排版，高度固定為 100%，寬度固定為 100%，只用 inline style。
-色彩：背景色 ${cfg.bg}、強調色 ${cfg.accent}、主文字 ${cfg.text}、副文字 ${cfg.subtext}。
+色彩：背景色 ${cfg.bg}、強調色 ${cfg.accent}、主文字 ${cfg.text}、副文字 ${cfg.subtext}。${brandSpine}
 
 請為以下主題製作一份專業簡報：
 主題：${topic}
