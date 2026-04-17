@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ':*)",
+      "Bash(python -c \"import pypdf; print\\('pypdf ok'\\)\")",
+      "Bash(py --version)",
+      "Bash(where python:*)",
+      "Read(//usr/**)",
+      "Bash(py -c \"from pypdf import PdfReader; print\\('ok'\\)\")",
+      "Bash(py -c ':*)",
+      "WebFetch(domain:www.vista.tw)",
+      "Bash(npm --version)",
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git --yes)",
+      "Bash(npx create-next-app@14 temp-project --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git --yes)",
+      "Bash(npx --yes create-next-app@14 temp-project --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git --yes --use-npm)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(node -e \"const p = require\\('./package.json'\\); console.log\\('next:', p.dependencies.next\\); console.log\\('react:', p.dependencies.react\\);\")",
+      "Bash(node -e \"const p=require\\('./node_modules/next/package.json'\\); console.log\\(p.version\\)\")",
+      "Bash(rm next.config.mjs)",
+      "Bash(cat)"
+    ]
+  }
+}
