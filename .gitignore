@@ -37,3 +37,7 @@ next-env.d.ts
 
 # superpowers brainstorm sessions
 .superpowers/
+
+# claude code artifacts
+.claude/
+.playwright-mcp/
