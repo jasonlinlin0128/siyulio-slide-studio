@@ -5,6 +5,7 @@ import { Presentation } from "@/lib/types";
 
 interface Props {
   presentation: Presentation;
+  slides?: string[];
 }
 
 function generateMockSlides(p: Presentation): string[] {
@@ -39,8 +40,8 @@ function generateMockSlides(p: Presentation): string[] {
   ];
 }
 
-export default function SlideViewer({ presentation }: Props) {
-  const slides = generateMockSlides(presentation);
+export default function SlideViewer({ presentation, slides: propSlides }: Props) {
+  const slides = propSlides?.length ? propSlides : generateMockSlides(presentation);
   const [current, setCurrent] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
 

@@ -61,11 +61,28 @@ export default function CreateWizard() {
     setStep("generate");
   }
 
+  const [generateError, setGenerateError] = useState<string | null>(null);
+
   async function handleGenerate() {
     setIsGenerating(true);
-    await new Promise((r) => setTimeout(r, 2500));
-    setIsGenerating(false);
-    router.push("/gallery?generated=true");
+    setGenerateError(null);
+    try {
+      const res = await fetch("/api/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic, outline, style: selectedStyle }),
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.error ?? "生成失敗");
+      }
+      const data = await res.json();
+      sessionStorage.setItem("preview_presentation", JSON.stringify(data));
+      router.push("/view/preview");
+    } catch (err) {
+      setGenerateError(err instanceof Error ? err.message : "生成失敗，請稍後再試");
+      setIsGenerating(false);
+    }
   }
 
   return (
@@ -201,10 +218,16 @@ export default function CreateWizard() {
             )}
           </div>
 
+          {generateError && (
+            <div className="bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm text-left">
+              {generateError}
+            </div>
+          )}
+
           {isGenerating ? (
             <div className="py-8">
               <div className="w-12 h-12 border-4 border-accent border-t-[#111111] rounded-full animate-spin mx-auto mb-4" />
-              <p className="text-text-secondary">AI 正在生成你的簡報…</p>
+              <p className="text-text-secondary">AI 正在生成你的簡報，約需 15-30 秒…</p>
             </div>
           ) : (
             <div className="flex gap-3">
